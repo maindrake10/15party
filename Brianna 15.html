@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brianna Aylen - Mis 15 Años</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('tapiz1.jpg'); /* Fondo general */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #600020;
+        }
+
+        header {
+            min-height: 120vh;
+            background: rgba(170, 246, 220, 0.7); /* Fondo verde con transparencia */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            font-style: italic;
+            color: #600020;
+            margin: 0;
+        }
+
+        header h2 {
+            font-size: 50px;
+            font-style: italic;
+            margin-top: 10px;
+            color: #600020;
+        }
+
+        section {
+            padding: 50px 20px;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        section:nth-child(even) {
+            background: rgba(96, 0, 32, 0.8); /* Fondo bordó oscuro con transparencia */
+            color: white;
+        }
+
+        section:nth-child(odd):not(header) {
+            background: rgba(170, 246, 220, 0.7); /* Fondo verde con transparencia */
+        }
+
+        .fecha {
+            font-size: 70px;
+            font-style: italic;
+            color: #600020;
+        }
+
+        .contador {
+            font-size: 100px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .contador div {
+            text-align: center;
+        }
+
+        .contador span {
+            display: block;
+            font-size: 100px;
+            font-weight: bold;
+            color: #600020;
+        }
+
+        .contador .unidad {
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #600020;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .imagenes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .foto {
+            max-width: 100%;
+            height: auto; /* Mantener relación de aspecto */
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Primera página -->
+    <header>
+        <h1>MIS 15 AÑOS</h1>
+        <h2>BRIANNA AYLEN</h2>
+    </header>
+
+    <!-- Segunda página -->
+    <section>
+        <h2 class="fecha">06 de junio del 2025</h2>
+    </section>
+
+    <!-- Tercera página -->
+    <section>
+        <h2 style="font-size: 50px; margin-bottom: 30px;">FALTAN</h2>
+        <div class="contador">
+            <div>
+                <span id="dias">0</span>
+                <div class="unidad">Días</div>
+            </div>
+            <div>
+                <span id="horas">0</span>
+                <div class="unidad">Horas</div>
+            </div>
+            <div>
+                <span id="minutos">0</span>
+                <div class="unidad">Minutos</div>
+            </div>
+            <div>
+                <span id="segundos">0</span>
+                <div class="unidad">Segundos</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cuarta página -->
+    <section>
+        <h2>Te invito a celebrar conmigo mi fiesta de 15 años en:</h2>
+        <p>Jano´s Puerto Madero</p>
+        <p>Olga Cossettini 1031, C1107, CABA</p>
+        <a href="https://maps.app.goo.gl/RtLzNBsLuF6sEZEY8" target="_blank" class="boton">Ver en Google Maps</a>
+    </section>
+
+    <!-- Quinta página -->
+    <section>
+        <h2>Galería de Fotos</h2>
+        <div class="imagenes">
+            <img src="foto1.jpg" alt="Brianna" class="foto">
+            <img src="foto2.jpg" alt="Brianna" class="foto">
+            <img src="foto3.jpg" alt="Brianna" class="foto">
+            <img src="foto4.jpg" alt="Brianna" class="foto">
+            <img src="foto5.jpg" alt="Brianna" class="foto">
+            <img src="foto6.jpg" alt="Brianna" class="foto">
+        </div>
+    </section>
+
+    <!-- Sexta página -->
+    <section>
+        <h2>El regalo obligatorio es tu compañía</h2>
+        <p>Si deseas obsequiarme algo, también lo sabré apreciar si es en efectivo o transferencia.</p>
+        <p><strong>Mi alias:</strong> jugodenaranja.com</p>
+    </section>
+
+    <!-- Séptima página -->
+    <section>
+        <h2>Confirmación de Asistencia</h2>
+        <a href="https://forms.gle/QH9DzMM6QATYwfPg6" target="_blank" class="boton">Confirmar Asistencia</a>
+        <footer>Espero contar con tu presencia en este día tan especial. Gracias por formar parte de mi vida.</footer>
+    </section>
+
+    <script>
+        function actualizarContador() {
+            const fechaEvento = new Date('2025-06-06T00:00:00');
+            const ahora = new Date();
+            const diferencia = fechaEvento - ahora;
+            document.getElementById('dias').textContent = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            document.getElementById('horas').textContent = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById('minutos').textContent = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById('segundos').textContent = Math.floor((diferencia % (1000 * 60)) / 1000);
+        }
+        setInterval(actualizarContador, 1000);
+        actualizarContador();
+    </script>
+</body>
+
+</html>
+
+
