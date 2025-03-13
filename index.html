@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brianna Aylen - Mis 15 Años</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: radial-gradient(circle, #4B0082, #C3E6CB);
+            color: #4B0082;
+            overflow-x: hidden;
+        }
+
+        section {
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 120px; /* Aumenté el tamaño */
+            font-family: 'Great Vibes', cursive;
+            color: gold;
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8), 0 0 15px gold;
+            animation: brillo 1.5s infinite alternate;
+        }
+
+        @keyframes brillo {
+            0% { text-shadow: 4px 4px 20px gold; }
+            100% { text-shadow: 4px 4px 40px gold; }
+        }
+
+        h2 {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 140px; /* Disminuí el espacio */
+            color: #800080;
+            text-shadow: 4px 4px 20px rgba(75, 0, 130, 0.6);
+            margin-top: -40px; /* Reduje el espacio entre los textos */
+        }
+
+        .contador {
+            font-size: 40px;
+            font-weight: bold;
+            color: #4B0082;
+            font-family: 'Great Vibes', cursive; /* Cambié la tipografía */
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, gold, #ffcc00);
+            color: #4B0082;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .boton:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Mejora la disposición de las fotos */
+            gap: 15px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        footer h2 {
+            font-size: 50px;
+        }
+
+        .fecha {
+            font-size: 55px;
+            color: #800080;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+            font-family: 'Great Vibes', cursive; /* Tipografía más llamativa */
+            text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 80px; } /* Ajusté tamaño para pantallas pequeñas */
+            h2 { font-size: 100px; } /* Ajusté tamaño para pantallas pequeñas */
+            .contador { font-size: 30px; }
+            .galeria img { width: 80%; } /* Aumenté el tamaño de las imágenes en pantallas pequeñas */
+            footer h2 { font-size: 35px; }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Mis 15 años</h1>
+        <h2>Brianna Aylen</h2>
+    </section>
+
+    <section>
+        <p class="fecha">06 de junio del 2025</p>
+    </section>
+
+    <section>
+        <h2 style="font-size: 80px;">Faltan solo:</h2>
+        <div class="contador" id="contador"></div>
+    </section>
+
+    <section>
+        <h2 style="font-size: 30px;">Te espero en:</h2>
+        <h3 style="font-size: 26px; font-weight: bold; color: gold;">Jano’s Puerto Madero</h3>
+        <img src="Janos.jpg" alt="Jano’s Puerto Madero" style="width: 50%; border-radius: 10px;">
+        <p style="font-size: 26px; font-weight: bold;">21:00 Hs</p>
+        <p>Dirección: Olga Cossettini 1031, C1107, CABA</p>
+        <a href="https://maps.app.goo.gl/Wn8A52onfqgxrhd9A" class="boton">Ver Mapa</a>
+    </section>
+
+    <section>
+        <div class="galeria">
+            <img src="foto1.jpg">
+            <img src="foto2.jpg">
+            <img src="foto3.jpg">
+            <img src="foto4.jpg">
+            <img src="foto5.jpg">
+            <img src="foto6.jpg">
+        </div>
+    </section>
+
+    <section>
+        <p style="font-size: 35px; font-family: 'Pinyon Script', cursive;">Tu presencia es el mejor regalo. Si deseas obsequiarme algo, una transferencia o efectivo serán apreciados.</p>
+        <p style="font-size: 28px; font-weight: bold; color: gold;">Mi Alias: jugodenaranja.com</p>
+    </section>
+
+    <section>
+        <h2 style="font-size: 45px;">¡Confirma tu asistencia!</h2>
+        <a href="https://forms.gle/YY6zGoDfbQ9uzpoq9" class="boton">Confirmar Asistencia</a>
+    </section>
+
+    <footer>
+        <h2>Brianna Aylen</h2>
+    </footer>
+
+    <script>
+        function updateCountdown() {
+            const eventDate = new Date("June 6, 2025 21:00:00").getTime();
+            const now = new Date().getTime();
+            const diff = eventDate - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000); /* Agregué segundos */
+            document.getElementById("contador").innerHTML = `${days} Días ${hours} Horas ${minutes} Minutos ${seconds} Segundos`;
+        }
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
